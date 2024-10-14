@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = localFont({
   src: "./fonts/Inter-VariableFont.ttf",
   variable: "--font-inter",
-  weight: "100 900",
+  weight: "100 200 300 400 500 600 700 800 900",
 });
 
 const interItalic = localFont({
   src: "./fonts/Inter-Italic-VariableFont.ttf",
   variable: "--font-inter-italic",
-  weight: "100 900",
+  weight: "100 200 300 400 500 600 700 800 900",
 });
 
 export const metadata: Metadata = {
   title: "Great Ware",
   description:
-    "We help build and manage a team of world-class developers to bring your vision to life",
+    "Empowering businesses with elite development teams. From start to scale, we build custom software solutions tailored to your needs.",
 };
 
 export default function RootLayout({
@@ -27,8 +29,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${interItalic.variable} antialiased`}>
+      <body
+        className={`${inter.variable} ${interItalic.variable} bg-white antialiased`}
+      >
+        <header className="border-b border-solid border-slate-200">
+          <Navbar />
+        </header>
         {children}
+        <Footer />
       </body>
     </html>
   );
