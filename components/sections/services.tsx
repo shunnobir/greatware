@@ -4,6 +4,7 @@ import {
   Cloud,
   Code,
   Component,
+  Sparkles,
   TabletSmartphone,
   UsersRound,
 } from "lucide-react";
@@ -52,6 +53,14 @@ const Services = () => {
       description:
         "Our design team specializes in crafting intuitive and visually compelling user interfaces that enhance user experience. We create wireframes, prototypes, and final designs with a focus on usability and customer engagement.",
     },
+    {
+      Icon: (props: React.SVGAttributes<HTMLOrSVGElement>) => (
+        <Sparkles {...props} />
+      ),
+      title: "AI & Machine Learning Solutions",
+      description:
+        "Enhance your software with AI-powered automation and data-driven insights. Our team builds custom machine learning models for predictive analytics, NLP, and intelligent decision-making to drive innovation and improve user experience.",
+    },
   ];
   return (
     <section
@@ -62,7 +71,7 @@ const Services = () => {
         <SectionTitle>
           <h1 className="text-4xl font-bold">Services</h1>
         </SectionTitle>
-        <div className="grid grid-cols-1 gap-4 py-2 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 py-2 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div key={service.title} className="">
               <ServiceCard {...service} />
