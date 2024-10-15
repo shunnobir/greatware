@@ -65,7 +65,7 @@ const BuildingGreatSoftwares = () => {
   ];
   return (
     <section className="relative flex flex-col gap-4 px-6 py-16 sm:px-10">
-      <Circle className="absolute -top-40 left-[60%] -z-10" />
+      <Circle className="absolute -top-44 left-[70%] -z-10" />
       <div className="mx-auto flex max-w-[1220px] flex-col gap-10">
         <SectionTitle>
           <h1 className="text-center text-4xl leading-relaxed">
