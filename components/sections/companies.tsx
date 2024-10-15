@@ -10,7 +10,7 @@ import Autoscroll from "embla-carousel-auto-scroll";
 
 const Companies = () => {
   return (
-    <section className="relative flex flex-col gap-20 py-32">
+    <section id="companies" className="relative flex flex-col gap-20 py-32">
       <div className="relative mx-auto flex max-w-[1220px] flex-col gap-10 px-6 sm:px-10 lg:flex-row">
         <div className="flex flex-1 flex-col gap-6">
           <SectionTitle align="left">
@@ -19,7 +19,7 @@ const Companies = () => {
               <strong>world-class software</strong>
             </h2>
           </SectionTitle>
-          <p className="max-w-[450px] text-xl leading-relaxed text-slate-500">
+          <p className="max-w-[450px] text-lg leading-relaxed text-slate-600">
             From startups to global enterprises, companies across industries
             partner with Greatware for reliable and scalable software solutions.
           </p>
@@ -42,11 +42,23 @@ const Companies = () => {
         />
       </div>
 
+      <div className="mx-auto flex max-w-[1220px] gap-10 px-6 sm:px-10">
+        <SectionTitle>
+          <h2 className="text-4xl leading-normal">
+            Meet the companies
+            <br />
+            <strong>we are working with</strong>
+          </h2>
+        </SectionTitle>
+      </div>
       <Carousel
         plugins={[
           Autoscroll({
             startDelay: 0,
             direction: "forward",
+            stopOnFocusIn: false,
+            stopOnInteraction: false,
+            stopOnMouseEnter: false,
           }),
         ]}
         opts={{ loop: true }}
